@@ -1,0 +1,12 @@
+%{
+#include<stdio.h>
+%}
+%%
+"greeks" {printf("welcome to greeks");}
+.|\n           {putchar(yytext[0]);}
+%%
+int yywrap(void){}
+int main(){
+yylex();
+return 0;
+}
